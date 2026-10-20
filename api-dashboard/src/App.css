@@ -1,0 +1,314 @@
+.app {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 38px 0 28px;
+}
+
+.eyebrow {
+  color: #315fc0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin-bottom: 9px;
+}
+
+.subtitle,
+.section-heading p {
+  color: #697586;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.refresh-btn {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 17px;
+  background: #315fc0;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.refresh-btn:hover {
+  background: #244b9c;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.stat-card,
+.dashboard {
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(25, 45, 80, 0.04);
+}
+
+.stat-card {
+  padding: 22px;
+}
+
+.stat-card span {
+  color: #697586;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  color: #243653;
+}
+
+.dashboard {
+  padding: 24px;
+  min-width: 0;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 21px;
+  margin-bottom: 7px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.search-box,
+.city-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.search-box span,
+.city-filter span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #35445b;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d9e0eb;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #243044;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #315fc0;
+  box-shadow: 0 0 0 3px rgba(49, 95, 192, 0.12);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+th {
+  background: #f5f7fb;
+  color: #58667b;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+td {
+  color: #3c485b;
+}
+
+tbody tr:hover {
+  background: #f8faff;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  color: #243653;
+  white-space: nowrap;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8eeff;
+  color: #315fc0;
+  font-weight: 700;
+}
+
+.city-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #edf5ef;
+  color: #34734b;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.message {
+  text-align: center;
+  padding: 42px 15px;
+  color: #697586;
+}
+
+.message h3 {
+  color: #243044;
+  margin-bottom: 9px;
+}
+
+.message p {
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.message .refresh-btn {
+  margin-top: 16px;
+}
+
+.error h3 {
+  color: #b42318;
+}
+
+.clear-btn {
+  margin-top: 16px;
+  padding: 11px 15px;
+  border: 1px solid #d9e0eb;
+  border-radius: 9px;
+  background: #fff;
+  color: #315fc0;
+  font-weight: 600;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 15px;
+  border: 3px solid #dce5fa;
+  border-top-color: #315fc0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.results-note {
+  margin-top: 15px;
+  color: #697586;
+  font-size: 12px;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  color: #697586;
+  font-size: 12px;
+}
+
+@media (max-width: 650px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 17px;
+  }
+
+  .stat-card h2 {
+    font-size: 25px;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+  }
+}
